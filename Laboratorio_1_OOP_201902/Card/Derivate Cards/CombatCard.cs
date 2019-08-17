@@ -7,32 +7,19 @@ namespace Laboratorio_1_OOP_201902.Card
     public class CombatCard : Card
     {
         //Atributos
-        private string effect;
+
         private int attackPoints;
         private bool hero;
 
         //Constructor
-        public CombatCard(string name, string type, string effect, int attackPoints, bool hero) :base(name,type)
+        public CombatCard(string name, string type,string effect,int attackPoints, bool hero) :base(name,type,effect)
         {
             
-            Effect = effect;
+        
             AttackPoints = attackPoints;
             Hero = hero;
         }
 
-
-
-        public string Effect
-        {
-            get
-            {
-                return this.effect;
-            }
-            set
-            {
-                this.effect = value;
-            }
-        }
         public int AttackPoints
         {
             get

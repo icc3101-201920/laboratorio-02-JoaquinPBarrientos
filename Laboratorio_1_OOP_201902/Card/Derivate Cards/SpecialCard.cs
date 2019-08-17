@@ -9,13 +9,11 @@ namespace Laboratorio_1_OOP_201902.Card
         //Atributos
 
         private string buffType;
-        private string effect;
+       
 
         //Constructor
-        public SpecialCard(string name, string type, string effect) : base(name, type)
+        public SpecialCard(string name, string type, string effect) : base(name, type, effect)
         {
-
-            Effect = effect;
             BuffType = null;
         }
 
@@ -33,19 +31,6 @@ namespace Laboratorio_1_OOP_201902.Card
                 this.buffType = value;
             }
         }
-        public string Effect
-        {
-            get
-            {
-                return this.effect;
-            }
-            set
-            {
-                this.effect = value;
-            }
-        }
-
-
     }
 }
 
