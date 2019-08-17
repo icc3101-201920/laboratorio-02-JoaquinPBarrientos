@@ -106,6 +106,31 @@ namespace Laboratorio_1_OOP_201902
         
 
         //Metodos
+
+
+        public void AddCombatCard(CombatCard combatCard, int playerId)
+        {
+            string typeOfCard = combatCard.Type;
+            if (typeOfCard == "melee")
+            {
+                this.meleeCards[playerId].Add(combatCard);
+            }
+            else if (typeOfCard == "range")
+            {
+                this.rangeCards[playerId].Add(combatCard);
+            }
+            else if (typeOfCard == "long range")
+            {
+                this.longRangeCards[playerId].Add(combatCard);
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        
+
         public void AddMeleeCard(int PlayerId, CombatCard combatCard)
         {
             throw new NotImplementedException();
@@ -126,6 +151,24 @@ namespace Laboratorio_1_OOP_201902
         {
             throw new NotImplementedException();
         }
+
+
+        public void DestroyCombatCard(int playerId)
+        {
+            this.meleeCards[playerId].Clear();
+            this.rangeCards[playerId].Clear();
+            this.longRangeCards[playerId].Clear();
+        }
+
+        public void DestroySpecialCard(int playerId)
+        {
+            this.specialMeleeCards[playerId].Clear();
+            this.specialRangeCards[playerId].Clear();
+            this.specialLongRangeCards[playerId].Clear();
+         }
+
+
+
         public void DestroyMeleeCard(int PlayerId)
         {
             throw new NotImplementedException();
