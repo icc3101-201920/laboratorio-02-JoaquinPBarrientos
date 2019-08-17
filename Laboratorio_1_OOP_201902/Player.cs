@@ -120,10 +120,8 @@ namespace Laboratorio_1_OOP_201902
             throw new NotImplementedException();
         }
 
-        public void ChooseCaptainCard()
+        public void ChooseCaptainCard(SpecialCard captainCard)
         {
-            CombatCard captainCard = new CombatCard("captain","captain", "poisson", 10, true);
-            hand.Add(captainCard);
+            captain = captainCard;
         }
-    }
 }

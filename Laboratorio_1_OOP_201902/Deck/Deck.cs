@@ -7,13 +7,12 @@ namespace Laboratorio_1_OOP_201902
 {
     public class Deck
     {
-        protected List<CombatCard> combatCards;
-        protected List<SpecialCard> SpecialCards;
-
-        public Deck()
+        public Deck(List<CombatCard> combatCards, List<SpecialCard> specialCards)
         {
-        
+            this.combatCards = combatCards;
+            this.SpecialCards = specialCards;
         }
+        
 
         public List<CombatCard> CombatCards { get => combatCards; set => combatCards = value; }
         public List<SpecialCard> SpecialCards1 { get => SpecialCards; set => SpecialCards = value; }
